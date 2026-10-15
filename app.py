@@ -41,6 +41,7 @@ CORS(
         "http://localhost:5176",
         "http://localhost:5177",
         "http://localhost:5178",
+        "https://bucolic-pithivier-3c1e05.netlify.app",
     ],
     supports_credentials=True,
 )
