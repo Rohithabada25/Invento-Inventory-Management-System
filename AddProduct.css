@@ -1,0 +1,125 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 24, 40, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.add-product-modal {
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  margin: 0 0 8px;
+  color: #25233a;
+}
+
+.modal-header p {
+  margin: 0;
+  color: #77768a;
+  font-size: 14px;
+}
+
+.close-button {
+  border: none;
+  background: #f2f0f9;
+  color: #5140a5;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.product-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.product-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #45445a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.product-form-grid input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #dedde8;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+  font-weight: 400;
+}
+
+.product-form-grid input:focus {
+  border-color: #6b4eff;
+  box-shadow: 0 0 0 3px rgba(107, 78, 255, 0.1);
+}
+
+.form-message {
+  margin-top: 18px;
+  color: #237a45;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.cancel-button,
+.form-actions .primary-button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background: #f0eff5;
+  color: #45445a;
+}
+
+.form-actions .primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .add-product-modal {
+    padding: 20px;
+  }
+
+  .product-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
